@@ -65,18 +65,18 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                               ],
                             ),
                           ),
-                          // controller.data != null
-                          //     ? Expanded(
-                          //         child: TabBarView(
-                          //           children: [
-                          //             FavoriteProduct(
-                          //                 favouriteData: controller.data!),
-                          //             FavoriteStore(
-                          //                 favouriteData: controller.data!),
-                          //           ],
-                          //         ),
-                          //       )
-                          //     : const SizedBox()
+                          controller.data != null
+                              ? Expanded(
+                                  child: TabBarView(
+                                    children: [
+                                      FavoriteProduct(
+                                          favouriteData: controller.data!),
+                                      FavoriteStore(
+                                          favouriteData: controller.data!),
+                                    ],
+                                  ),
+                                )
+                              : const SizedBox()
                         ],
                       ),
                     ),

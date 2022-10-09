@@ -232,43 +232,42 @@ class Repository {
 
     var data = json.decode(response.body);
     // DELETE THIS DEMO LATER
-    if (email == "test@test.com" && password == "test1234") {
-      UserDataModel userDataModel = UserDataModel.fromJson({
-        "success": true,
-        "message": "Successfully loggedIn",
-        "data": [
-          {
-            "token": "1234",
-            "firstName": "Tolulope",
-            "image": "https://randomuser.me/api/portraits/med/men/75.jpg",
-            "phone": "(489) 330-2385",
-            "email": "test@test.com",
-            // "favourites": null,
-            // "notifications": null,
-            "dateOfBirth": "1992-03-08T15:13:16.688Z",
-            "gender": "M",
-          },
-        ]
-      });
-      LocalDataHelper().saveUserToken(userDataModel.data!.token);
-      LocalDataHelper().saveUserAllData(userDataModel);
-      return true;
-    } else {
-      showErrorToast("Wrong demo details");
-      return false;
-    }
-
-    //PLEASE DO WELL TO UNCOMMENT LATER
-    // if (response.statusCode == 200) {
-    //   UserDataModel userDataModel = UserDataModel.fromJson(data);
+    // if (email == "test@test.com" && password == "test1234") {
+    //   UserDataModel userDataModel = UserDataModel.fromJson({
+    //     "success": true,
+    //     "message": "Successfully loggedIn",
+    //     "data": [
+    //       {
+    //         "token": "1",
+    //         "firstName": "Tolulope",
+    //         "image": "https://randomuser.me/api/portraits/med/men/75.jpg",
+    //         "phone": "(489) 330-2385",
+    //         "email": "test@test.com",
+    //         // "favourites": null,
+    //         // "notifications": null,
+    //         "dateOfBirth": "1992-03-08T15:13:16.688Z",
+    //         "gender": "M",
+    //       },
+    //     ]
+    //   });
     //   LocalDataHelper().saveUserToken(userDataModel.data!.token);
     //   LocalDataHelper().saveUserAllData(userDataModel);
-
     //   return true;
     // } else {
-    //   showErrorToast(data["message"]);
+    //   showErrorToast("Wrong demo details");
     //   return false;
     // }
+
+    if (response.statusCode == 200) {
+      UserDataModel userDataModel = UserDataModel.fromJson(data);
+      LocalDataHelper().saveUserToken(userDataModel.data!.token);
+      LocalDataHelper().saveUserAllData(userDataModel);
+
+      return true;
+    } else {
+      showErrorToast(data["message"]);
+      return false;
+    }
   }
 
   //User Forget Password
