@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "845049942037",
+    "project_id": "dromedic-b4e44",
+    "storage_bucket": "dromedic-b4e44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845049942037:android:7691a2b523b04d97c4fe1c",
+        "android_client_info": {
+          "package_name": "com.comzinee.dromedic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845049942037-t1ocspa06uub01jplu6bv742dun6rss4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADQSlX2vl8HgG9ZSb6KAV-blVAJ89vckk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845049942037-t1ocspa06uub01jplu6bv742dun6rss4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
